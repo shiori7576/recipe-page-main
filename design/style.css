@@ -1,0 +1,169 @@
+/* CUSTOM PROPERTIES
+---------------------------------------- */
+:root { 
+    --lightorange: hsl(30, 54%, 90%);
+    --brown800:    hsl(14, 45%, 36%);
+    --rose800:     hsl(332, 51%, 32%);
+    --rose50:      hsl(330, 100%, 98%);
+    --stone150:    hsl(30, 18%, 87%);
+    --bg-color:      var(--lightorange);
+    --color-primary: var(--brown800);
+    --color-dark:    var(--rose800);
+    --color-light:   var(--rose50);
+    --line-color:    var(--stone150);
+}
+
+/* Global Styles
+----------------------------------------*/
+body {
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;    
+    font-size: 16px;
+    line-height: 1.5em;
+    margin: 0;
+}
+@media screen and (max-width:767px) {
+    body {
+        background-color: white;
+        letter-spacing: 0.35px;
+    }
+}
+@media screen and (min-width:768px) {
+    body {
+        background-color: var(--bg-color);
+    }
+}
+li {
+    padding-left: 17px;
+    line-height: 1.8em;
+}
+h2 {
+    color: var(--color-primary);
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+}
+hr {
+    border-top: 2px solid var(--line-color);
+}
+
+/* Main container
+----------------------------------------*/
+@media screen and (max-width:767px) {
+    main {
+        background-color: white;
+        box-sizing: border-box;
+        padding: 0 1.5rem;
+        width: 100%;
+    }
+}
+@media screen and (min-width:768px) {
+    main {
+        background-color: white;
+        box-sizing: content-box;
+        margin: 100px auto;
+        padding: 25px;
+        width: 50%;
+        border-radius: 25px;
+    }
+}
+
+/* Main image and title
+----------------------------------------*/
+@media screen and (max-width:767px) {
+    .mobile-img {
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+    .desktop-img {
+        display: none;
+    }
+}
+@media screen and (min-width:768px) {
+    .mobile-img {
+        display: none;
+    }
+    .desktop-img {
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-radius: 15px;
+    }  
+}
+h1 {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    line-height: 1em;
+}
+
+/* Preparation Time
+---------------------------------------- */
+.time-section {
+    width: auto;
+    box-sizing: border-box;
+    padding: 4px 25px 4px 10px;
+    margin: 25px 0;
+    border-radius: 25px;
+    background-color: var(--color-light);
+}
+h3 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-left: 1em;
+    margin-bottom: 0;
+}
+.time-item {
+    margin-top: 10px;
+}
+.time-item li::marker {
+    color: var(--color-dark);
+}
+
+
+/* Ingredients
+---------------------------------------- */
+.ingredients-item li::marker {
+    color: var(--color-primary);
+}
+
+/* Instructions
+---------------------------------------- */
+ol li::marker {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* Nutrition
+---------------------------------------- */
+.table-row {
+    border-bottom: 2px solid var(--line-color);
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    padding: 10px 30px;
+}
+.table-row:last-child {
+    border: none;
+}
+.table-value {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* Footer
+---------------------------------------- */
+footer {
+    text-align: center;
+}
+
+/*## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
